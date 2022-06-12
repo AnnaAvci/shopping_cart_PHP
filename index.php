@@ -1,72 +1,73 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  
-    <main>
-        <h1 class="text-center">Ajouter un produit</h1>
-        <?php
-                // empty() vérifie si aucun produit n'est enregistré
+        <!-- CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="./assets/css/index.css">
+    </head>
+    <body>
+        <main>
+            <h1 class="text-center">Ajouter un produit</h1>
+
+            <?php
                 if(empty($_SESSION['products'])){
                     echo "<p class='text-center'>0 produits enregistrés</p>";
                 } else { 
                     $_SESSION['products']->getTotalProducts();
                 }
-                ?>
-    <!-- Action =  fichier  à  atteindre  lorsque  l'utilisateur soumettra le formulaire
-    Method précise  par  quelle  méthode  HTTP  les  données  du  formulaire  seront transmises au serveur
-Name permet à la requête de classer le contenu de la saisie dans des clés portant le nom choisi. -->
-        <!-- <div class="container-fluid">
-            <div class="row">
-                <div class="col-12"> -->
-                        <form action="traitement.php?action=add" method="post">
-                    <p>
-                        <label>
-                            Nom du produit: <br> 
-                            <input type="text" name="name">
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            Prix du produit: <br> 
-                            <input type="number" step="any" name="price">
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                        Quantité désirée: <br> 
-                            <input type="number" name="qtt" value="1">
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                        Description: <br> 
-                            <input type="textarea" name="description" id="description">
-                        </label>
-                    </p>
-                    <p>
-                        <input type="submit" name="submit" value="Ajouter le produit" class='btn'>
-                    </p>
-                    <p>
-                    <a href="recap.php" target="_blank" class='btn'>Voir le récap</a>
-                    </p>
-                </form>
+            ?>
+
+            <!--=======  FORM  ======-->
+            <form action="traitement.php?action=add" method="post">
+                <p>
+                    <label>
+                        Nom du produit: <br> 
+                        <input type="text" name="name">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Prix du produit: <br> 
+                        <input type="number" step="any" name="price">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                    Quantité désirée: <br> 
+                        <input type="number" name="qtt" value="1">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                    Description: <br> 
+                        <input type="textarea" name="description" id="description">
+                    </label>
+                </p>
+
+                <p>
+                    <input type="submit" name="submit" value="Ajouter le produit" class='btn'>
+                </p>
                 
-                <!-- </div>
-            </div>
-        </div>
-        -->
-    </main>
-    <footer>
-    
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
+                <p>
+                    <a href="recap.php" target="_blank" class='btn'>Voir le récaputilatif</a>
+                </p>
+            </form>
+        </main>
+
+        <!--=======  SCRIPT  ======-->
+        <script 
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+            crossorigin="anonymous"
+        >
+        </script>
+    </body>
 </html>

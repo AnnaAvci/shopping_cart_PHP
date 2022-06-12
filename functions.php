@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @description: Allows to show all registrated products
+ * @description: Allows to show all added products
  * @author Anna Avci
  * @return string
  */

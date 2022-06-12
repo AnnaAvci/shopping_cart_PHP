@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+   
+}
+
+body{
+    background-image: url("img/fruits.png");
+    color: white;
+    font-weight: bold;
+}
+
+#description{
+    width: 300px;
+    height: 150px;
+}  
+
+
+/* Boutons pour ajouter le produit et voir le recap */
+.btn{
+  background-color: #371e53;
+  color:#FFF;
+}
+
+.btn:hover{
+    color: white;
+    background-color: #a263e8;
+}
+
+
+h1{
+    font-weight: bold;
+}
+
+
